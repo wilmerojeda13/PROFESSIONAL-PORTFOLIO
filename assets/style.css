@@ -4,12 +4,12 @@
 
 /* Site Core + Style*/
 :root {
-
 --primary: rgb(101, 57, 57);
-    --secondary:rgb(27, 27, 37);
-    --tertiary: rgb(240,121,82)
-    --dark: rgba(28, 29, 33, 1);
-    --light: rgb(255, 255, 255);
+--secondary:rgb(27, 27, 37);
+--tertiary: rgb(240,121,82)
+--dark: rgba(28, 29, 33, 1);
+--light: rgb(255, 255, 255);
+
 }
 
 body {
@@ -71,3 +71,127 @@ main {
 .light {
     color: var(--light);
 }
+
+/* Hero Content */
+.hero {
+    background: rgb(0, 0, 0);
+    background-image: url("./hero-image.jpg");
+    background-size: auto;
+    background-position: 150px;
+    min-height: 30vh;
+    color: var(--light);
+    padding: 2% 6%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    text-align: right;
+    padding-left: 10vw;
+}
+
+.hero img {
+    width: 200px;
+    margin: 30px;
+    border-radius: 9%;
+    opacity: 0.9;
+}
+
+.hero img:hover{
+    opacity: 1;
+    box-shadow: 0 0 11px rgba(33,33,33,.2); 
+    transform: translateY(0) scale(1.1);
+}
+
+.hero div {
+    flex: 0 0 90%;
+}
+
+.hero h2 {
+    background-color: var(--secondary);
+    color: var(--tertiary);
+    margin: 0;
+    padding: 5px 10px;
+    font-size: 3.2rem;
+    line-height: 1.2;
+    display: inline;
+}
+
+/* Main Content */
+.page-wrapper {
+    max-width: 85%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.page-section {
+    margin: 25px 0;
+    padding: 10px 0;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: stretch;
+    justify-content: space-between;
+}
+
+.page-section > h2 {
+    flex: 0 0 20%;
+    text-align: right;
+    padding-right: 15px;
+    border-right: 4px solid var(--primary);
+    font-size: 3.2rem;
+    line-height: 1.1;
+}
+
+.page-section > div {
+    flex: 0 0 75%;
+}
+
+.page-section p {
+    margin-bottom: 20px;
+    color: black;
+    font-size:larger ;
+}
+
+/* Making the portfolio srtucture */
+.grid-container {
+    display: grid;
+    column-gap: 10px;
+    row-gap: 10px;
+    grid-auto-flow: dense;
+    grid-template-columns: repeat(12, 1fr);
+    grid-auto-rows: minmax(150px, 1fr);
+}
+
+.grid-item {
+    border: 7px solid var(--secondary);
+    grid-column: span 4;
+    background-color: var(--primary);
+    color: var(--tertiary);
+    display: flex;
+    align-items: flex-end;
+    padding: 0 0 20px 0;
+    text-decoration: none;
+    background-blend-mode:hard-light;
+    background-size: 150%;
+    transition: all 0.5s;
+    font-size: 0.8rem;
+}
+
+.grid-item:first-child {
+    grid-column: span 8;
+    grid-row: span 2;
+}
+
+.grid-item:hover {
+    background-color: rgba(241, 233, 233, 0.3);
+}
+
+.grid-item div {
+    background-color: var(--secondary);
+    padding: 8px 10px;
+}
+
+.grid-item h3 {
+    font-size: 1.4rem;
+}
+
+
