@@ -157,7 +157,7 @@ main {
 }
 
 .page-section > h2 {
-    flex: 0 0 20%;
+    flex: 0 0 10%;
     text-align: right;
     padding-right: 15px;
     border-right: 4px solid var(--primary);
@@ -228,7 +228,7 @@ main {
 }
 
 .horiseon {
-    background-image: url("images/horiseon.png");
+    background-image: url("images/Fit-Plan.png");
 }
 
 .whinedine {
